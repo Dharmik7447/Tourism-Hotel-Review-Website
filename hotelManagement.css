@@ -1,0 +1,44 @@
+/* Import Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f8f9fa;
+}
+
+/* Hero Section Styling (Bootstrap doesn't have a background image utility) */
+.hero-section {
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://images.unsplash.com/photo-1455587734955-081b22074882?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80');
+    background-size: cover;
+    background-position: center;
+    height: 75vh; /* 75% of the viewport height */
+}
+
+/* Destination Images Hover Effect */
+.dest-img {
+    width: 180px;
+    height: 180px;       /* Force the SAME height (Making it a square) */
+    object-fit: cover;   /* MAGIC LINE: This crops the image to fill the circle without stretching */
+    border-radius: 50%;  /* Makes it round */
+    object-position: center;
+    transition: transform 0.3s ease;
+    cursor: pointer;
+}
+.dest-img:hover {
+    transform: scale(1.1);
+}
+
+/* Hotel Card Hover Effect */
+.hover-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.hover-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.15) !important;
+}
+
+/* Card Image Fix */
+.card-img-top {
+    height: 200px;
+    object-fit: cover;
+}
